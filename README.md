@@ -215,7 +215,7 @@
     <section id="contact" class="section contact-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-card">
-            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Official Mail</p>
+            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">support Mail</p>
             <a href="mailto:rrxstudiosofficial@gmail.com">rrxstudiosofficial@gmail.com</a>
         </div>
     </section>
@@ -224,7 +224,7 @@
         <div>
             <a href="https://rrxstudios.github.io/RRX/" class="premium-link">Explore RRX Studios Network</a>
         </div>
-        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY INNOVATION</p>
+        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY RedRrox</p>
     </footer>
 
 </body>
