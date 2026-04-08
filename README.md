@@ -7,57 +7,60 @@
         :root {
             --primary-color: #FFD700;
             --bg-dark: #0a0a0a;
-            --card-bg: #161616;
+            --card-bg: #141414;
             --text-light: #ffffff;
-            --nav-height: 70px;
+            --nav-height: 75px;
         }
+
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-light);
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
-        /* --- Navbar --- */
+        /* --- Full Mobile Optimized Navbar --- */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 10%;
+            padding: 0 8%;
             height: var(--nav-height);
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 10000;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-            box-sizing: border-box;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.05);
         }
 
         .logo {
-            font-size: 1.3rem;
-            font-weight: 800;
+            font-size: 1.4rem;
+            font-weight: 900;
             color: var(--primary-color);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
+        .nav-links { display: flex; gap: 25px; }
         .nav-links a {
-            color: white;
+            color: #ccc;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
             transition: 0.3s;
         }
-
         .nav-links a:hover { color: var(--primary-color); }
 
-        /* --- Hero Section --- */
+        /* --- Premium Hero Section --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -65,80 +68,116 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+            padding: 20px;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 10px;
-            letter-spacing: 5px;
+            font-size: clamp(2.5rem, 10vw, 5.5rem);
+            margin: 0;
+            letter-spacing: 10px;
+            font-weight: 900;
+            background: linear-gradient(to bottom, #fff 40%, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* --- Expertise Section & ANIMATION --- */
-        .section { padding: 100px 10%; text-align: center; }
+        .hero p {
+            font-size: clamp(0.9rem, 4vw, 1.2rem);
+            color: #666;
+            margin-top: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* --- Expertise Section --- */
+        .section { padding: 100px 8%; text-align: center; }
         
+        .section-title {
+            color: var(--primary-color);
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 60px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 40px 30px;
-            border-radius: 20px;
-            border: 1px solid #222;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth Slide/Pop Effect */
-            position: relative;
-            overflow: hidden;
+            padding: 50px 30px;
+            border-radius: 24px;
+            border: 1px solid #1f1f1f;
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
         }
 
-        /* HOVER ANIMATION HERE */
         .card:hover {
-            transform: translateY(-15px); /* Upward Slide */
+            transform: translateY(-15px) scale(1.02);
             border-color: var(--primary-color);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
-        .card h3 { color: var(--primary-color); margin-bottom: 15px; }
+        .card h3 { color: #fff; font-size: 1.6rem; margin-bottom: 20px; }
+        .card p { color: #888; font-size: 1rem; line-height: 1.7; }
 
         /* --- Contact Section --- */
-        .contact-box {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
+        .contact-section { background: #050505; border-top: 1px solid #111; }
+        
+        .contact-card {
+            background: linear-gradient(145deg, #0f0f0f, #151515);
+            padding: 60px 30px;
+            border-radius: 30px;
             display: inline-block;
-            margin-top: 30px;
+            width: 100%;
+            max-width: 700px;
+            border: 1px solid #222;
         }
 
-        .contact-box a {
+        .contact-card a {
             color: var(--primary-color);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 5vw, 1.8rem);
+            font-weight: 800;
+            transition: 0.3s;
+            word-break: break-all;
         }
+        .contact-card a:hover { opacity: 0.8; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
 
-        /* --- Footer & Links --- */
+        /* --- Footer --- */
         footer {
-            padding: 60px 10%;
+            padding: 80px 8% 40px;
             background: #000;
-            border-top: 1px solid #111;
             text-align: center;
         }
 
-        .footer-links { margin-bottom: 20px; }
-        .footer-links a {
-            color: #888;
+        .premium-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            padding: 12px 30px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
-            transition: 0.3s;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: 0.4s;
         }
-        .footer-links a:hover { color: var(--primary-color); }
+        .premium-link:hover { background: var(--primary-color); color: #000; }
 
+        .copyright { color: #333; font-size: 0.75rem; letter-spacing: 1px; }
+
+        /* --- Mobile Responsiveness --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Mobile a menu hide kora hoyeche simplified rakhar jonno */
+            nav { padding: 0 20px; justify-content: center; }
+            .nav-links { display: none; } /* Mobile a menu simplified rakhlam */
+            .section { padding: 60px 20px; }
+            .card { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -148,7 +187,7 @@
         <div class="logo">RRX STUDIOS</div>
         <div class="nav-links">
             <a href="#">Home</a>
-            <a href="#about">Expertise</a>
+            <a href="#expertise">Expertise</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -158,40 +197,37 @@
         <p>Innovation in Motion</p>
     </section>
 
-    <section id="about" class="section">
-        <h2 style="color: var(--primary-color); font-size: 2.5rem;">Our Expertise</h2>
+    <section id="expertise" class="section">
+        <h2 class="section-title">Our Expertise</h2>
         <div class="grid">
             <div class="card">
                 <h3>Digital Content</h3>
-                <p>Creating high-end video production and immersive gaming narratives.</p>
+                <p>Leading the industry with immersive storytelling and high-fidelity video production.</p>
             </div>
             <div class="card">
                 <h3>Innovation</h3>
-                <p>Developing future-ready digital solutions with cutting-edge tech.</p>
+                <p>Building complex digital ecosystems powered by next-gen technology.</p>
             </div>
             <div class="card">
                 <h3>Brand Identity</h3>
-                <p>Designing powerful visual identities that dominate the market.</p>
+                <p>Architecting visual legacies that resonate across the global digital landscape.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section" style="background: #0f0f0f;">
-        <h2 style="color: var(--primary-color);">Get In Touch</h2>
-        <p>আমাদের সাথে যোগাযোগ করতে বা প্রজেক্ট নিয়ে আলোচনা করতে ইমেইল করুন।</p>
-        <div class="contact-box">
-            <a href="mailto:contact.rrxstudios@gmail.com">contact.rrxstudios@gmail.com</a>
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-card">
+            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Official Mail</p>
+            <a href="mailto:rrxstudiosofficial@gmail.com">rrxstudiosofficial@gmail.com</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-links">
-            <strong>Our Ventures:</strong><br><br>
-            <a href="https://rrxstudios.github.io/RRX/">RRX Studios v3</a>
-            <a href="https://rrxstudios.github.io/RRX/">RRX Studios v4</a>
-            <a href="https://rrxstudios.github.io/RRX/">RRX Studios v5</a>
+        <div>
+            <a href="https://rrxstudios.github.io/RRX/" class="premium-link">Explore RRX Studios Network</a>
         </div>
-        <p>&copy; 2026 RRX STUDIOS | Powered by Innovation</p>
+        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY INNOVATION</p>
     </footer>
 
 </body>
