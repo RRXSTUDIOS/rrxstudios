@@ -93,7 +93,7 @@
             margin-bottom: 30px;
         }
 
-        /* --- Animated Social Buttons --- */
+        /* --- Social Buttons --- */
         .social-group {
             display: flex;
             gap: 20px;
@@ -117,114 +117,33 @@
             border: 2px solid transparent;
         }
 
-        .youtube-btn {
-            background: rgba(255, 0, 0, 0.1);
-            color: var(--youtube);
-            border-color: var(--youtube);
-        }
+        .youtube-btn { background: rgba(255, 0, 0, 0.1); color: var(--youtube); border-color: var(--youtube); }
+        .youtube-btn:hover { background: var(--youtube); color: white; box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); transform: translateY(-5px); }
 
-        .youtube-btn:hover {
-            background: var(--youtube);
-            color: white;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
-            transform: translateY(-5px);
-        }
-
-        .discord-btn {
-            background: rgba(88, 101, 242, 0.1);
-            color: var(--discord);
-            border-color: var(--discord);
-        }
-
-        .discord-btn:hover {
-            background: var(--discord);
-            color: white;
-            box-shadow: 0 0 25px rgba(88, 101, 242, 0.5);
-            transform: translateY(-5px);
-        }
+        .discord-btn { background: rgba(88, 101, 242, 0.1); color: var(--discord); border-color: var(--discord); }
+        .discord-btn:hover { background: var(--discord); color: white; box-shadow: 0 0 25px rgba(88, 101, 242, 0.5); transform: translateY(-5px); }
 
         /* --- Expertise Section --- */
         .section { padding: 100px 8%; text-align: center; }
-        
-        .section-title {
-            color: var(--primary-color);
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            margin-bottom: 60px;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
+        .section-title { color: var(--primary-color); font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 60px; font-weight: 800; text-transform: uppercase; }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
-        .card {
-            background: var(--card-bg);
-            padding: 50px 30px;
-            border-radius: 24px;
-            border: 1px solid #1f1f1f;
-            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-        }
-
-        .card:hover {
-            transform: translateY(-15px);
-            border-color: var(--primary-color);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-        }
+        .card { background: var(--card-bg); padding: 50px 30px; border-radius: 24px; border: 1px solid #1f1f1f; transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1); }
+        .card:hover { transform: translateY(-15px); border-color: var(--primary-color); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); }
 
         .card h3 { color: #fff; font-size: 1.6rem; margin-bottom: 20px; }
         .card p { color: #888; font-size: 1rem; line-height: 1.7; }
 
         /* --- Contact Section --- */
         .contact-section { background: #050505; border-top: 1px solid #111; }
-        
-        .contact-card {
-            background: linear-gradient(145deg, #0f0f0f, #151515);
-            padding: 60px 30px;
-            border-radius: 30px;
-            display: inline-block;
-            width: 100%;
-            max-width: 700px;
-            border: 1px solid #222;
-        }
-
-        .contact-card a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: clamp(1rem, 5vw, 1.8rem);
-            font-weight: 800;
-            transition: 0.3s;
-            word-break: break-all;
-        }
+        .contact-card { background: linear-gradient(145deg, #0f0f0f, #151515); padding: 60px 30px; border-radius: 30px; display: inline-block; width: 100%; max-width: 700px; border: 1px solid #222; }
+        .contact-card a { color: var(--primary-color); text-decoration: none; font-size: clamp(1rem, 5vw, 1.8rem); font-weight: 800; transition: 0.3s; word-break: break-all; }
 
         /* --- Footer --- */
-        footer {
-            padding: 80px 8% 40px;
-            background: #000;
-            text-align: center;
-        }
-
-        .footer-nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .premium-link-small {
-            padding: 8px 20px;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            transition: 0.3s;
-            letter-spacing: 1px;
-        }
+        footer { padding: 80px 8% 40px; background: #000; text-align: center; }
+        .footer-nav-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .premium-link-small { padding: 8px 20px; border: 1px solid var(--primary-color); color: var(--primary-color); text-decoration: none; border-radius: 30px; font-size: 0.75rem; font-weight: 600; transition: 0.3s; letter-spacing: 1px; }
         .premium-link-small:hover { background: var(--primary-color); color: #000; }
 
         .copyright { color: #333; font-size: 0.75rem; letter-spacing: 1px; margin-top: 40px; }
@@ -253,12 +172,8 @@
         <p>Innovation in Motion</p>
         
         <div class="social-group">
-            <a href="http://www.youtube.com/@RRXSTUDIOS" target="_blank" class="btn-social youtube-btn">
-                YouTube
-            </a>
-            <a href="https://discord.gg/vGKpaZdFtt" target="_blank" class="btn-social discord-btn">
-                Discord
-            </a>
+            <a href="http://www.youtube.com/@RRXSTUDIOS" target="_blank" class="btn-social youtube-btn">YouTube</a>
+            <a href="https://discord.gg/vGKpaZdFtt" target="_blank" class="btn-social discord-btn">Discord</a>
         </div>
     </section>
 
@@ -291,9 +206,10 @@
     <footer>
         <p style="color: var(--primary-color); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">RRX Network</p>
         <div class="footer-nav-links">
-            <a href="#" class="premium-link-small">RRX CORE</a>
+            <a href="https://rrxstudios.github.io/RRX/" target="_blank" class="premium-link-small">RRX CORE</a>
         </div>
-        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY RedRrox</p>
+        
+        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY REDRROX</p>
     </footer>
 
 </body>
