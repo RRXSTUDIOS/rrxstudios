@@ -283,7 +283,7 @@
     <section id="contact" class="section contact-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-card">
-            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Official Mail</p>
+            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">support Mail</p>
             <a href="mailto:rrxstudiosofficial@gmail.com">rrxstudiosofficial@gmail.com</a>
         </div>
     </section>
@@ -292,10 +292,8 @@
         <p style="color: var(--primary-color); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">RRX Network</p>
         <div class="footer-nav-links">
             <a href="#" class="premium-link-small">RRX CORE</a>
-            <a href="#" class="premium-link-small">CHOR BAZER</a>
-            <a href="#" class="premium-link-small" style="border-color: #fff; color: #fff;">RRX STUDIOS</a>
         </div>
-        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY INNOVATION</p>
+        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY RedRrox</p>
     </footer>
 
 </body>
