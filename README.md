@@ -24,7 +24,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Full Mobile Optimized Navbar --- */
+        /* --- Navbar --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -60,7 +60,7 @@
         }
         .nav-links a:hover { color: var(--primary-color); }
 
-        /* --- Premium Hero Section --- */
+        /* --- Hero Section --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -116,7 +116,7 @@
         }
 
         .card:hover {
-            transform: translateY(-15px) scale(1.02);
+            transform: translateY(-15px);
             border-color: var(--primary-color);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
@@ -145,7 +145,6 @@
             transition: 0.3s;
             word-break: break-all;
         }
-        .contact-card a:hover { opacity: 0.8; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
 
         /* --- Footer --- */
         footer {
@@ -172,12 +171,10 @@
 
         .copyright { color: #333; font-size: 0.75rem; letter-spacing: 1px; }
 
-        /* --- Mobile Responsiveness --- */
         @media (max-width: 768px) {
             nav { padding: 0 20px; justify-content: center; }
-            .nav-links { display: none; } /* Mobile a menu simplified rakhlam */
-            .section { padding: 60px 20px; }
-            .card { padding: 40px 20px; }
+            .nav-links { display: none; }
+            .section { padding: 80px 20px; }
         }
     </style>
 </head>
@@ -202,15 +199,15 @@
         <div class="grid">
             <div class="card">
                 <h3>Digital Content</h3>
-                <p>Leading the industry with immersive storytelling and high-fidelity video production.</p>
+                <p>Creating immersive storytelling and high-fidelity video production for the digital era.</p>
             </div>
             <div class="card">
                 <h3>Innovation</h3>
-                <p>Building complex digital ecosystems powered by next-gen technology.</p>
+                <p>Designing and building next-gen digital ecosystems through cutting-edge technology.</p>
             </div>
             <div class="card">
                 <h3>Brand Identity</h3>
-                <p>Architecting visual legacies that resonate across the global digital landscape.</p>
+                <p>Developing unique visual legacies that define and dominate the modern landscape.</p>
             </div>
         </div>
     </section>
