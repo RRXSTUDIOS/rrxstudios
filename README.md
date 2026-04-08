@@ -273,7 +273,7 @@
                 <h3>Innovation</h3>
                 <p>Designing and building next-gen digital ecosystems through cutting-edge technology.</p>
             </div>
-            <div class="card :hover">
+            <div class="card">
                 <h3>Brand Identity</h3>
                 <p>Developing unique visual legacies that define and dominate the modern landscape.</p>
             </div>
@@ -283,7 +283,7 @@
     <section id="contact" class="section contact-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-card">
-            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">support Mail</p>
+            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Support Mail</p>
             <a href="mailto:rrxstudiosofficial@gmail.com">rrxstudiosofficial@gmail.com</a>
         </div>
     </section>
