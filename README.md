@@ -10,6 +10,8 @@
             --card-bg: #141414;
             --text-light: #ffffff;
             --nav-height: 75px;
+            --youtube: #FF0000;
+            --discord: #5865F2;
         }
 
         * { box-sizing: border-box; }
@@ -88,6 +90,57 @@
             margin-top: 10px;
             letter-spacing: 4px;
             text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        /* --- Animated Social Buttons --- */
+        .social-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-social {
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid transparent;
+        }
+
+        .youtube-btn {
+            background: rgba(255, 0, 0, 0.1);
+            color: var(--youtube);
+            border-color: var(--youtube);
+        }
+
+        .youtube-btn:hover {
+            background: var(--youtube);
+            color: white;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .discord-btn {
+            background: rgba(88, 101, 242, 0.1);
+            color: var(--discord);
+            border-color: var(--discord);
+        }
+
+        .discord-btn:hover {
+            background: var(--discord);
+            color: white;
+            box-shadow: 0 0 25px rgba(88, 101, 242, 0.5);
+            transform: translateY(-5px);
         }
 
         /* --- Expertise Section --- */
@@ -153,28 +206,34 @@
             text-align: center;
         }
 
-        .premium-link {
-            display: inline-block;
-            margin-bottom: 40px;
-            padding: 12px 30px;
+        .footer-nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .premium-link-small {
+            padding: 8px 20px;
             border: 1px solid var(--primary-color);
             color: var(--primary-color);
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: 0.4s;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: 0.3s;
+            letter-spacing: 1px;
         }
-        .premium-link:hover { background: var(--primary-color); color: #000; }
+        .premium-link-small:hover { background: var(--primary-color); color: #000; }
 
-        .copyright { color: #333; font-size: 0.75rem; letter-spacing: 1px; }
+        .copyright { color: #333; font-size: 0.75rem; letter-spacing: 1px; margin-top: 40px; }
 
         @media (max-width: 768px) {
             nav { padding: 0 20px; justify-content: center; }
             .nav-links { display: none; }
             .section { padding: 80px 20px; }
+            .hero h1 { letter-spacing: 5px; }
         }
     </style>
 </head>
@@ -192,6 +251,15 @@
     <section class="hero">
         <h1>RRX STUDIOS</h1>
         <p>Innovation in Motion</p>
+        
+        <div class="social-group">
+            <a href="http://www.youtube.com/@RRXSTUDIOS" target="_blank" class="btn-social youtube-btn">
+                YouTube
+            </a>
+            <a href="https://discord.gg/vGKpaZdFtt" target="_blank" class="btn-social discord-btn">
+                Discord
+            </a>
+        </div>
     </section>
 
     <section id="expertise" class="section">
@@ -205,7 +273,7 @@
                 <h3>Innovation</h3>
                 <p>Designing and building next-gen digital ecosystems through cutting-edge technology.</p>
             </div>
-            <div class="card">
+            <div class="card :hover">
                 <h3>Brand Identity</h3>
                 <p>Developing unique visual legacies that define and dominate the modern landscape.</p>
             </div>
@@ -215,16 +283,19 @@
     <section id="contact" class="section contact-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-card">
-            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">support Mail</p>
+            <p style="color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Official Mail</p>
             <a href="mailto:rrxstudiosofficial@gmail.com">rrxstudiosofficial@gmail.com</a>
         </div>
     </section>
 
     <footer>
-        <div>
-            <a href="https://rrxstudios.github.io/RRX/" class="premium-link">Explore RRX Studios Network</a>
+        <p style="color: var(--primary-color); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">RRX Network</p>
+        <div class="footer-nav-links">
+            <a href="#" class="premium-link-small">RRX CORE</a>
+            <a href="#" class="premium-link-small">CHOR BAZER</a>
+            <a href="#" class="premium-link-small" style="border-color: #fff; color: #fff;">RRX STUDIOS</a>
         </div>
-        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY RedRrox</p>
+        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY INNOVATION</p>
     </footer>
 
 </body>
