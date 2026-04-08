@@ -206,7 +206,7 @@
     <footer>
         <p style="color: var(--primary-color); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">RRX Network</p>
         <div class="footer-nav-links">
-            <a href="https://rrxstudios.github.io/RRX/" target="_blank" class="premium-link-small">RRX CORE</a>
+            <a href="https://rrxstudios.github.io/RRXCORE/" target="_blank" class="premium-link-small">RRX CORE</a>
         </div>
         
         <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY REDRROX</p>
