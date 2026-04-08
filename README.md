@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RRX STUDIOS | Innovation in Motion</title>
     <style>
         :root {
@@ -12,138 +12,133 @@
             --nav-height: 70px;
         }
 
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-light);
-            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
-        /* --- Mobile Optimized Navbar --- */
+        /* --- Navbar --- */
         nav {
             display: flex;
-            justify-content: center; /* মোবাইলে লোগো মাঝখানে রাখার জন্য */
+            justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 10%;
             height: var(--nav-height);
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 10000;
             border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            box-sizing: border-box;
         }
 
         .logo {
             font-size: 1.3rem;
             font-weight: 800;
             color: var(--primary-color);
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        /* --- Hero Section (Responsive) --- */
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* --- Hero Section --- */
         .hero {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 10vw, 4.5rem); /* স্ক্রিন অনুযায়ী অটো সাইজ হবে */
-            margin-bottom: 15px;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 10px;
             letter-spacing: 5px;
-            font-weight: 900;
         }
 
-        .hero p {
-            font-size: clamp(0.9rem, 4vw, 1.2rem);
-            color: #888;
-            margin-bottom: 35px;
-            max-width: 600px;
-        }
-
-        .cta-btn {
-            padding: 14px 35px;
-            background-color: var(--primary-color);
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            font-size: 1rem;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
-        }
-
-        /* --- Expertise Section (Mobile Grid) --- */
-        .about {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about h2 {
-            color: var(--primary-color);
-            font-size: clamp(1.8rem, 6vw, 2.5rem);
-            margin-bottom: 40px;
-        }
-
+        /* --- Expertise Section & ANIMATION --- */
+        .section { padding: 100px 10%; text-align: center; }
+        
         .grid {
             display: grid;
-            grid-template-columns: 1fr; /* মোবাইলে এক কলাম */
-            gap: 20px;
-        }
-
-        /* ট্যাবলেট বা পিসিতে ৩ কলাম হবে */
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: repeat(3, 1fr); }
-            nav { justify-content: space-between; padding: 0 10%; }
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 35px 25px;
+            padding: 40px 30px;
             border-radius: 20px;
             border: 1px solid #222;
-            transition: 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth Slide/Pop Effect */
+            position: relative;
+            overflow: hidden;
         }
 
-        .card:active { transform: scale(0.98); } /* মোবাইলে টাচ করলে হালকা ছোট হবে */
+        /* HOVER ANIMATION HERE */
+        .card:hover {
+            transform: translateY(-15px); /* Upward Slide */
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+        }
 
-        .card h3 {
+        .card h3 { color: var(--primary-color); margin-bottom: 15px; }
+
+        /* --- Contact Section --- */
+        .contact-box {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .contact-box a {
             color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .card p {
-            color: #bbb;
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
+        /* --- Footer & Links --- */
         footer {
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #444;
+            padding: 60px 10%;
+            background: #000;
             border-top: 1px solid #111;
+            text-align: center;
+        }
+
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .footer-links a:hover { color: var(--primary-color); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Mobile a menu hide kora hoyeche simplified rakhar jonno */
         }
     </style>
 </head>
@@ -151,33 +146,51 @@
 
     <nav>
         <div class="logo">RRX STUDIOS</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">Expertise</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
     <section class="hero">
         <h1>RRX STUDIOS</h1>
-        <p>Innovation in Motion | Leading the Digital Frontier</p>
-        <a href="#about" class="cta-btn">Explore Studio</a>
+        <p>Innovation in Motion</p>
     </section>
 
-    <section id="about" class="about">
-        <h2>Our Expertise</h2>
+    <section id="about" class="section">
+        <h2 style="color: var(--primary-color); font-size: 2.5rem;">Our Expertise</h2>
         <div class="grid">
             <div class="card">
                 <h3>Digital Content</h3>
-                <p>High-end video production and immersive gaming content for the modern audience.</p>
+                <p>Creating high-end video production and immersive gaming narratives.</p>
             </div>
             <div class="card">
                 <h3>Innovation</h3>
-                <p>Harnessing latest technology to create smart and scalable digital ecosystems.</p>
+                <p>Developing future-ready digital solutions with cutting-edge tech.</p>
             </div>
             <div class="card">
-                <h3>Branding</h3>
-                <p>Designing powerful visual identities that resonate with global standards.</p>
+                <h3>Brand Identity</h3>
+                <p>Designing powerful visual identities that dominate the market.</p>
             </div>
         </div>
     </section>
 
+    <section id="contact" class="section" style="background: #0f0f0f;">
+        <h2 style="color: var(--primary-color);">Get In Touch</h2>
+        <p>আমাদের সাথে যোগাযোগ করতে বা প্রজেক্ট নিয়ে আলোচনা করতে ইমেইল করুন।</p>
+        <div class="contact-box">
+            <a href="mailto:contact.rrxstudios@gmail.com">contact.rrxstudios@gmail.com</a>
+        </div>
+    </section>
+
     <footer>
+        <div class="footer-links">
+            <strong>Our Ventures:</strong><br><br>
+            <a href="https://rrxstudios.github.io/RRX/">RRX Studios v3</a>
+            <a href="https://rrxstudios.github.io/RRX/">RRX Studios v4</a>
+            <a href="https://rrxstudios.github.io/RRX/">RRX Studios v5</a>
+        </div>
         <p>&copy; 2026 RRX STUDIOS | Powered by Innovation</p>
     </footer>
 
