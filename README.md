@@ -27,30 +27,42 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Navbar Fix --- */
+        /* --- Navbar Hard Fix --- */
         nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 5%; height: 75px;
-            background: rgba(8, 2, 13, 0.95); backdrop-filter: blur(15px);
+            height: 75px;
+            background: rgba(8, 2, 13, 0.98);
+            backdrop-filter: blur(15px);
             position: fixed; top: 0; width: 100%; z-index: 10000;
             border-bottom: 2px solid var(--rrx-red);
+            display: flex;
+            justify-content: center; /* কন্টেইনার সেন্টারিং */
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px; /* নির্দিষ্ট সীমার ভেতর রাখবে */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
 
         .logo {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem; font-weight: 900;
-            color: white; letter-spacing: 2px;
+            font-size: 1.2rem; font-weight: 900;
+            color: white; letter-spacing: 1.5px;
             text-shadow: 2px 0 var(--rrx-red);
+            flex-shrink: 0; /* লোগো ছোট হবে না */
         }
 
         .nav-links { 
             display: flex; 
-            gap: 20px; 
-            padding-right: 20px; /* লিঙ্কে স্ক্রিনের বাইরে যাওয়া ঠেকাতে */
+            gap: 15px; 
+            flex-shrink: 1; /* স্ক্রিন ছোট হলে মেনু সঙ্কুচিত হবে */
         } 
         .nav-links a {
             color: #ccc; text-decoration: none;
-            font-size: 0.8rem; font-weight: 700; text-transform: uppercase; transition: 0.3s;
+            font-size: 0.75rem; font-weight: 700; text-transform: uppercase; transition: 0.3s;
         }
         .nav-links a:hover { color: var(--rrx-red); }
 
@@ -73,7 +85,7 @@
 
         .glitch-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2.5rem, 10vw, 5.5rem);
+            font-size: clamp(2.2rem, 10vw, 5.5rem);
             font-weight: 900; position: relative; color: white;
             text-transform: uppercase; letter-spacing: 5px;
             text-shadow: 0 0 15px var(--rrx-red); z-index: 1;
@@ -121,7 +133,7 @@
             display: inline-block; width: 100%; max-width: 700px; 
             border: 1px solid #222; margin-bottom: 40px;
         }
-        .contact-card a { color: var(--rrx-red); text-decoration: none; font-size: clamp(1rem, 5vw, 1.8rem); font-weight: 800; transition: 0.3s; word-break: break-all; }
+        .contact-card a { color: var(--rrx-red); text-decoration: none; font-size: clamp(0.9rem, 5vw, 1.8rem); font-weight: 800; transition: 0.3s; word-break: break-all; }
 
         /* --- Footer Glow --- */
         footer { padding: 80px 8% 40px; background: #000; text-align: center; border-top: 1px solid #111; }
@@ -135,21 +147,23 @@
             text-shadow: 0 0 10px var(--rrx-red), 0 0 5px var(--rrx-red);
         }
 
-        @media (max-width: 768px) {
-            nav { padding: 0 15px; }
-            .nav-links { gap: 10px; padding-right: 0; }
-            .logo { font-size: 1.1rem; }
+        @media (max-width: 480px) {
+            .nav-container { padding: 0 10px; }
+            .nav-links { gap: 10px; }
+            .logo { font-size: 0.9rem; letter-spacing: 1px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">RRX STUDIOS</div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#contact">Contact</a>
+        <div class="nav-container">
+            <div class="logo">RRX STUDIOS</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
