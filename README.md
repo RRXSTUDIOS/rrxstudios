@@ -201,7 +201,7 @@
             <a href="https://rrxstudios.github.io/RRXCORE/" target="_blank" class="premium-link">RRX CORE</a>
         </div>
         <p style="color: var(--rrx-red); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">RRX Network</p>
-        <p class="copyright">&copy; 2026 RRX STUDIOS | POWERED BY REDRROX</p>
+        <p class="copyright">&copy; 2026 RRX Studios | Powered by RedRrox</p>
     </footer>
 
 </body>
