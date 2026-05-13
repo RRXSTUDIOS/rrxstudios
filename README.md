@@ -8,22 +8,20 @@
     
     <style>
         :root {
-            /* লোগোর কালার প্যালেট অনুযায়ী পার্পল এবং রেড সেট করা হয়েছে */
-            --bg-color: #1a0b2e; 
-            --secondary-bg: rgba(31, 40, 51, 0.8);
+            /* লোগোর কালার অনুযায়ী পার্পল এবং রেড সেট করা হয়েছে */
+            --bg-deep: #0d0216; 
+            --purple-glow: #1a0533;
             --accent-red: #ff003c;
-            --glow-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c;
-            --text-color: #e0e0e0;
+            --neon-glow: 0 0 15px #ff003c, 0 0 30px #ff003c;
+            --text-color: #ffffff;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            /* লোগোর ব্যাকগ্রাউন্ডের মতো পার্পল গ্রেডিয়েন্ট এবং ডট ইফেক্ট */
-            background: radial-gradient(circle, #2e1a47 0%, #0b051a 100%);
-            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 20px 20px; /* ডট টেক্সচার */
+            /* লোগোর ব্যাকগ্রাউন্ডের মতো ডার্ক পার্পল গ্রেডিয়েন্ট */
+            background: radial-gradient(circle at center, #1a0533 0%, #05010a 100%);
             color: var(--text-color);
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -35,24 +33,24 @@
             to { transform: rotate(360deg); }
         }
 
-        @keyframes pulseGlow {
+        @keyframes pulseRed {
             0% { text-shadow: 0 0 10px var(--accent-red); }
             50% { text-shadow: 0 0 30px var(--accent-red), 0 0 50px var(--accent-red); }
             100% { text-shadow: 0 0 10px var(--accent-red); }
         }
 
-        /* --- Header --- */
+        /* --- Header (Clean & No Extra Text) --- */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 50px;
-            background-color: rgba(11, 5, 26, 0.9);
+            padding: 20px 60px;
+            background-color: rgba(5, 1, 10, 0.95);
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 2px solid var(--accent-red);
-            box-shadow: 0 0 20px rgba(255, 0, 60, 0.3);
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
         }
 
         header .logo {
@@ -60,7 +58,7 @@
             font-size: 1.8em;
             font-weight: bold;
             color: #fff;
-            text-shadow: var(--glow-shadow);
+            text-shadow: var(--neon-glow);
         }
 
         nav a {
@@ -74,7 +72,7 @@
 
         nav a:hover {
             color: var(--accent-red);
-            text-shadow: var(--glow-shadow);
+            text-shadow: var(--neon-glow);
         }
 
         /* --- Hero Section --- */
@@ -85,112 +83,107 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
 
-        .gear-container {
-            font-size: 110px;
+        .gear-main {
+            font-size: 120px;
             color: var(--accent-red);
-            margin-bottom: 25px;
-            animation: rotateGear 6s linear infinite;
-            filter: drop-shadow(var(--glow-shadow));
+            margin-bottom: 30px;
+            animation: rotateGear 5s linear infinite;
+            filter: drop-shadow(var(--neon-glow));
         }
 
         .hero h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.5em;
+            font-size: 5em;
             color: #fff;
             margin: 0;
-            text-shadow: var(--glow-shadow);
-            animation: pulseGlow 2.5s infinite ease-in-out;
+            text-shadow: var(--neon-glow);
+            animation: pulseRed 2s infinite ease-in-out;
+            letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.3em;
-            margin: 10px 0;
-            letter-spacing: 6px;
+            font-size: 1.4em;
+            margin: 15px 0;
+            letter-spacing: 8px;
             text-transform: uppercase;
-            color: #fff;
             opacity: 0.9;
         }
 
-        /* --- Social Icons Only --- */
-        .cta-buttons {
+        /* --- Icons Only --- */
+        .social-container {
             display: flex;
-            gap: 40px;
-            margin-top: 35px;
+            gap: 45px;
+            margin-top: 40px;
         }
 
-        .cta-buttons a i {
-            font-size: 55px;
+        .social-container a i {
+            font-size: 60px;
             color: #fff;
-            transition: 0.4s;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .cta-buttons a .fa-youtube:hover {
+        .fa-youtube:hover {
             color: #ff0000;
             filter: drop-shadow(0 0 15px #ff0000);
-            transform: scale(1.2) rotate(5deg);
+            transform: scale(1.3);
         }
 
-        .cta-buttons a .fa-discord:hover {
+        .fa-discord:hover {
             color: #5865F2;
             filter: drop-shadow(0 0 15px #5865F2);
-            transform: scale(1.2) rotate(-5deg);
+            transform: scale(1.3);
         }
 
-        /* --- Expertise Section --- */
+        /* --- Expertise --- */
         .expertise {
-            padding: 80px 50px;
+            padding: 100px 60px;
             text-align: center;
         }
 
         .expertise h2 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.8em;
+            font-size: 3em;
             color: #fff;
-            text-shadow: var(--glow-shadow);
-            margin-bottom: 50px;
+            text-shadow: var(--neon-glow);
+            margin-bottom: 60px;
         }
 
-        .expertise-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
         .card {
-            background-color: rgba(31, 40, 51, 0.4);
-            padding: 45px;
+            background: rgba(26, 5, 51, 0.6);
+            padding: 50px;
             border-radius: 20px;
             border: 1px solid rgba(255, 0, 60, 0.2);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(10px);
             transition: 0.4s;
         }
 
         .card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-15px);
             border: 1px solid var(--accent-red);
-            box-shadow: 0 0 25px rgba(255, 0, 60, 0.4);
-            background-color: rgba(31, 40, 51, 0.6);
+            box-shadow: 0 0 30px rgba(255, 0, 60, 0.4);
+            background: rgba(26, 5, 51, 0.8);
         }
 
         .card i {
-            font-size: 45px;
+            font-size: 50px;
             color: var(--accent-red);
             margin-bottom: 25px;
-            animation: rotateGear 12s linear infinite;
-        }
-
-        .card h3 {
-            font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            margin-bottom: 15px;
+            animation: rotateGear 10s linear infinite;
         }
 
         /* --- Contact --- */
         .contact {
-            padding: 90px 50px;
-            background-color: rgba(11, 5, 26, 0.8);
+            padding: 100px 60px;
+            background: rgba(5, 1, 10, 0.9);
             text-align: center;
             border-top: 2px solid var(--accent-red);
         }
@@ -198,43 +191,26 @@
         .contact a {
             color: var(--accent-red);
             text-decoration: none;
-            font-size: 1.6em;
+            font-size: 1.8em;
             font-weight: bold;
-            text-shadow: 0 0 8px var(--accent-red);
-            transition: 0.3s;
+            text-shadow: 0 0 10px var(--accent-red);
         }
 
-        .contact a:hover {
-            letter-spacing: 1px;
-        }
-
-        /* --- Footer --- */
         footer {
             padding: 50px;
             text-align: center;
-            background-color: #05020a;
+            background: #000;
         }
 
         footer p {
-            font-size: 1em;
             color: #fff;
             text-shadow: 0 0 5px var(--accent-red);
         }
 
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-red);
-        }
-
+        /* Mobile View Fix */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8em; }
-            header { padding: 15px 25px; }
+            .hero h1 { font-size: 3em; }
+            header { padding: 20px; }
             nav { display: none; }
         }
     </style>
@@ -251,13 +227,13 @@
 </header>
 
 <section class="hero">
-    <div class="gear-container">
+    <div class="gear-main">
         <i class="fa-solid fa-gear"></i>
     </div>
     <h1>RRX STUDIOS</h1>
     <p>Innovation in Motion</p>
     
-    <div class="cta-buttons">
+    <div class="social-container">
         <a href="http://www.youtube.com/@RRXSTUDIOS" target="_blank">
             <i class="fa-brands fa-youtube"></i>
         </a>
@@ -269,7 +245,7 @@
 
 <section id="expertise" class="expertise">
     <h2>OUR EXPERTISE</h2>
-    <div class="expertise-grid">
+    <div class="grid">
         <div class="card">
             <i class="fa-solid fa-cog"></i>
             <h3>Digital Content</h3>
@@ -295,10 +271,6 @@
 </section>
 
 <footer>
-    <div class="footer-links" style="margin-bottom: 20px;">
-        <a href="https://rrxstudios.github.io/RRXCORE/">RRX CORE</a>
-        <a href="#">RRX Network</a>
-    </div>
     <p>&copy; 2026 RRX STUDIOS | POWERED BY REDRROX</p>
 </footer>
 
